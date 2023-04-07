@@ -46,15 +46,18 @@ $(function () {
       console.log(timeblockHour);
       //this takes the number from the hour ID, now used below to conditonally add classes to past, present,future
       if (timeblockHour > currentHour) {
-        $('.time-block').addClass('future');
+        $(this).addClass('future');
       } else if (timeblockHour < currentHour){
-        $('.time-block').addClass('past');
+        $(this).removeClass('future');
+        $(this).addClass('past');
       } else {
-        $('.time-block').addClass('present');
+        $(this).removeClass('future');
+        $(this).removeClass('past');
+        $(this).addClass('present');
       }
     })
   };
-  
+ 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
