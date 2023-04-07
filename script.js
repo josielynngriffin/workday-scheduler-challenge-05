@@ -17,7 +17,25 @@ $(function () {
   let saveBtn = $('.saveBtn');
   saveBtn.on('click', function () {
     console.log('save clicked');
+    console.log($(this));
+    console.log($(this).parent());
+    let hourID = $(this).parent().attr('id');
+    console.log(hourID);
+    //the above selects the time-block div
+    console.log($(this).siblings('.description'));
+    let userEntry = $(this).siblings('.description').val();
+    console.log(userEntry);
+    localStorage.setItem(hourID, userEntry);
   });
+  $('#hour-9 .description').val(localStorage.getItem('hour-9'));
+  $('#hour-10 .description').val(localStorage.getItem('hour-10'));
+  $('#hour-11 .description').val(localStorage.getItem('hour-11'));
+  $('#hour-12 .description').val(localStorage.getItem('hour-12'));
+  $('#hour-13 .description').val(localStorage.getItem('hour-13'));
+  $('#hour-14 .description').val(localStorage.getItem('hour-14'));
+  $('#hour-15 .description').val(localStorage.getItem('hour-15'));
+  $('#hour-16 .description').val(localStorage.getItem('hour-16'));
+  $('#hour-17 .description').val(localStorage.getItem('hour-17'));
   // How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
