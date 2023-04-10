@@ -8,6 +8,7 @@ In addition to the planner's requirements, I also updated the styling to be more
 ## Usage
 To use this planner, you can write in anything from tasks, reminders, or a even just a note to yourself in the text field next to the desired time and click the orange button to the side to save it for a later visit. The colors will dynamically update through the day to show the passage of time.
 ## Screenshots
+![A screenshot of the application](./workday-scheduler-screenshot.png)
 ## Credits
 I recieved the starter code for this assignment from: [Source Code](https://github.com/coding-boot-camp/crispy-octo-meme)
 ## Link to Live, Deployed Page
